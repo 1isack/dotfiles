@@ -1,0 +1,78 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 26,
+    "width": 520,
+    "spacing": 8,
+    "modules-left": [],
+    "modules-center": [
+        "clock",
+        "group/kb",
+        "hyprland/workspaces",
+        "group/audio",
+        "custom/brightness",
+        "battery",
+        "custom/screenshot"
+    ],
+    "modules-right": [],
+    "clock": {
+        "format": "   {:%H:%M}",
+        "on-click": "wlogout",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+    "group/kb": {
+        "orientation": "horizontal",
+        "modules": ["custom/kblayout", "bluetooth"]
+    },
+    "custom/kblayout": {
+        "exec": "/home/isaak/.config/waybar/scripts/mango-kblayout.sh",
+        "return-type": "text"
+    },
+    "bluetooth": {
+        "format": "",
+        "on-click": "/home/isaak/.local/bin/toggle-music-widget.sh",
+        "tooltip-format": "Toggle music widget"
+    },
+    "hyprland/workspaces": {
+        "format": "{id}"
+    },
+    "group/audio": {
+        "orientation": "horizontal",
+        "modules": ["pulseaudio", "pulseaudio#mic"]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "scroll-step": 5
+    },
+    "pulseaudio#mic": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+    },
+    "custom/brightness": {
+        "exec": "brightnessctl -m | awk -F, '{print $4}'",
+        "format": "  {}",
+        "interval": 2,
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": " {capacity}%"
+    },
+    "custom/screenshot": {
+        "exec": "python3 -c \"import sys; sys.stdout.write(chr(0xf030))\"",
+        "format": "{}",
+        "interval": "once",
+        "on-click": "/home/isaak/.local/bin/capture-clipboard.sh",
+        "on-click-right": "/home/isaak/.local/bin/capture-clipboard.sh video",
+        "tooltip-format": "Click: region screenshot | Right-click: toggle region recording with audio"
+    }
+}

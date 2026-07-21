@@ -1,0 +1,29 @@
+@import url("file:///home/isaak/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "GeistMono Nerd Font", "Symbols Nerd Font";
+    font-size: 18px;
+    background-image: none;
+}
+
+window {
+    background-color: alpha(@background, 0.75);
+}
+
+button {
+    color: @foreground;
+    background-color: @background;
+    border: 1px solid @color8;
+    border-radius: 0;
+    margin: 10px;
+    padding: 20px;
+    transition: 100ms;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color: @color4;
+    color: @background;
+    border: 1px solid @color4;
+}

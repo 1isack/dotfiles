@@ -1,0 +1,51 @@
+# ============================================
+# PYWAL (auto-generated from your wallpaper)
+# ============================================
+[theme]
+name=Pywal
+# Core colors
+accent={color4}
+text={foreground}
+textDim={color7}
+textMuted={color8}
+# General Colors
+logo={color4}
+header={color4}
+footer={color4}
+help={color6}
+link={color4}
+nowplaying={color4}
+playbackstatus={background}
+# Playlist View
+playlist.rownum={color8}
+playlist.title={foreground}
+playlist.playing={color4}
+# Track View
+trackview.title={color4}
+trackview.artist={color4}
+trackview.album={color4}
+trackview.year={color4}
+trackview.time={color4}
+trackview.visualizer={color4}
+trackview.lyrics={color6}
+# Library View
+library.artist={color4}
+library.album={foreground}
+library.track={foreground}
+library.enqueued={color4}
+library.playing={color4}
+# Search
+search.label={color6}
+search.query={foreground}
+search.result={foreground}
+search.enqueued={color4}
+search.playing={color4}
+# Progress
+progress.filled={color4}
+progress.empty={color8}
+progress.elapsed={color4}
+# Status
+status.info=-1
+status.warning={color3}
+status.error={color1}
+status.success={color2}

@@ -1,0 +1,20 @@
+[general]
+framerate = 60
+autosens = 1
+bar_spacing = 0
+[input]
+method = pipewire
+source = auto
+[output]
+method = ncurses
+channels = stereo
+[color]
+gradient = 1
+gradient_color_1 = '#63723F'
+gradient_color_2 = '#738438'
+#gradient_color_3 = '#75894A'
+#gradient_color_4 = '#bdc6a2'
+#gradient_color_5 = '#bdc6a2'
+[smoothing]
+noise_reduction = 55
+monstercat = 1

@@ -1,0 +1,59 @@
+@import url("file:///home/isaak/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "GeistMono Nerd Font", "Symbols Nerd Font";
+    font-size: 12px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+}
+
+window#waybar {
+    background-color: @background;
+    color: @foreground;
+}
+
+#waybar > box {
+    background-color: @background;
+}
+
+#clock,
+#custom-kblayout,
+#bluetooth,
+#custom-mango-tags,
+#pulseaudio,
+#pulseaudio.mic,
+#custom-brightness,
+#battery,
+#custom-screenshot {
+    background-color: @background;
+    color: @foreground;
+    padding: 0 10px;
+}
+
+#workspaces button {
+    background-color: @background;
+    color: @color8;
+    padding: 0 6px;
+}
+
+#workspaces button.active {
+    color: @color4;
+}
+
+#workspaces button.urgent {
+    color: @color1;
+}
+
+#battery.warning {
+    color: @color3;
+}
+#battery.critical {
+    color: @color1;
+}
+
+#custom-screenshot {
+    color: @color4;
+}
